@@ -12,52 +12,59 @@
       background: #f7efe5;
       font-family: Georgia, "Times New Roman", serif;
     }
-    body { display: flex; justify-content: center; }
+
+    body {
+      display: flex;
+      justify-content: center;
+    }
+
     .page {
       width: 100%;
       max-width: 820px;
-      min-height: 100dvh;
       position: relative;
-      background-image: url("assets/language-homepage-background.png");
-      background-size: cover;
-      background-position: center top;
-      background-repeat: no-repeat;
-      aspect-ratio: 2 / 3;
+      background: #f7efe5;
+      line-height: 0;
     }
-    .language-links {
-      position: absolute;
-      left: 25.2%;
-      right: 25.2%;
-      top: 70.2%;
-      display: grid;
-      gap: 1.55%;
-    }
-    .language-links a {
+
+    .page img {
+      width: 100%;
+      height: auto;
       display: block;
-      height: clamp(64px, 7.2vw, 92px);
-      border-radius: 18px;
-      text-decoration: none;
-      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+      -webkit-user-drag: none;
     }
-    .language-links a:focus-visible {
+
+    .lang-link {
+      position: absolute;
+      display: block;
+      left: 22.5%;
+      width: 55%;
+      height: 5.4%;
+      border-radius: 20px;
+      text-indent: -9999px;
+      overflow: hidden;
+      -webkit-tap-highlight-color: rgba(7,63,45,.18);
+    }
+
+    .lang-link:focus-visible {
       outline: 3px solid #0b3b2b;
       outline-offset: 4px;
+      background: rgba(255,255,255,.18);
     }
-    @media (max-width: 600px) {
-      .page { max-width: none; background-size: cover; background-position: center top; }
-      .language-links { left: 24.5%; right: 24.5%; top: 70.3%; gap: 10px; }
-      .language-links a { height: 73px; border-radius: 16px; }
-    }
-    @media (max-width: 390px) { .language-links a { height: 68px; } }
+
+    /* Percentage placement is relative to the actual image, so it stays aligned on laptop and mobile */
+    .spanish { top: 70.2%; }
+    .english { top: 76.2%; }
+    .french  { top: 82.2%; }
   </style>
 </head>
 <body>
   <main class="page" aria-label="Terrace Retreat Sitges language selection">
-    <nav class="language-links" aria-label="Choose your language">
-      <a href="es/index.html" aria-label="Español - Guía de Sitges"></a>
-      <a href="en/index.html" aria-label="English - Sitges Guide"></a>
-      <a href="fr/index.html" aria-label="Français - Guide de Sitges"></a>
-    </nav>
+    <img src="assets/language-homepage-background.png" alt="Terrace Retreat Sitges guide. Choose Spanish, English or French." />
+
+    <a class="lang-link spanish" href="es/index.html" aria-label="Open Spanish guide">Spanish</a>
+    <a class="lang-link english" href="en/index.html" aria-label="Open English guide">English</a>
+    <a class="lang-link french" href="fr/index.html" aria-label="Open French guide">French</a>
   </main>
 </body>
 </html>
