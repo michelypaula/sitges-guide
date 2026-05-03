@@ -891,17 +891,68 @@ outline:none;
 }
 
 
-/* v30 top header */
+
+/* v31 clean mobile layout + subtle swipe mood */
 @media (max-width:768px) and (orientation:portrait){
-  .custom-top-header{
-    margin:10px 0 16px;
-    text-align:center;
+  .mobile-mini-brand{
+    position:fixed;
+    top:58px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:45;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:6px 12px;
+    border:1px solid rgba(216,199,180,.75);
+    border-radius:999px;
+    background:rgba(255,250,243,.62);
+    color:#073f2d;
+    backdrop-filter:blur(8px);
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+    opacity:.82;
+    pointer-events:none;
+    animation:softBrandFade 5s ease-in-out infinite;
   }
-  .custom-top-header img{
-    width:100%;
-    max-width:520px;
-    display:block;
-    margin:0 auto 8px;
+
+  .mobile-mini-brand span{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:17px;
+    line-height:1;
+    letter-spacing:-1px;
+  }
+
+  .mobile-mini-brand strong{
+    font-family:Georgia,"Times New Roman",serif;
+    text-transform:uppercase;
+    letter-spacing:1.8px;
+    font-size:10px;
+    font-weight:600;
+  }
+
+  .chapter{
+    padding-top:88px;
+  }
+
+  .chapter-hero{
+    min-height:48vh;
+  }
+
+  .chapter-hero,
+  .app-card,
+  .event-card,
+  .link-image-card{
+    animation:softPageIn .45s ease both;
+  }
+
+  @keyframes softBrandFade{
+    0%,100%{opacity:.58}
+    50%{opacity:.88}
+  }
+
+  @keyframes softPageIn{
+    from{opacity:.86; transform:translateY(6px)}
+    to{opacity:1; transform:translateY(0)}
   }
 }
 
@@ -909,10 +960,12 @@ outline:none;
 </head>
 <body>
 
-<section class="custom-top-header">
-  <img src="assets/top-logo.png" alt="Terrace Retreat">
-  <img src="assets/top-title.png" alt="Sitges Events and Culture">
-</section>
+<div class="mobile-mini-brand" aria-hidden="true">
+  <span>TR</span>
+  <strong>Terrace Retreat</strong>
+</div>
+
+
 
 <main class="guide desktop-guide">
 
