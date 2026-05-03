@@ -221,6 +221,243 @@ outline:none;
   .back-home{display:none}
 }
 
+
+/* v23 Visual branded mobile test */
+@media (max-width: 768px) and (orientation: portrait){
+  .mobile-guide{
+    padding:0 0 72px;
+    background:#f7efe5;
+  }
+
+  .visual-hero{
+    min-height:72vh;
+    margin:0;
+    background:
+      linear-gradient(to bottom, rgba(7,63,45,.05), rgba(247,239,229,.15) 40%, rgba(247,239,229,.9) 100%),
+      url("assets/page-01.png");
+    background-size:cover;
+    background-position:center top;
+    display:flex;
+    align-items:flex-end;
+    padding:22px 18px 32px;
+  }
+
+  .hero-overlay{
+    width:100%;
+    background:rgba(255,250,243,.78);
+    border:1px solid rgba(216,199,180,.9);
+    border-radius:28px;
+    padding:24px 20px;
+    box-shadow:0 12px 34px rgba(0,0,0,.10);
+    backdrop-filter:blur(8px);
+  }
+
+  .eyebrow,
+  .section-kicker{
+    margin:0 0 8px;
+    text-transform:uppercase;
+    letter-spacing:2.8px;
+    font-size:11px;
+    color:#9f6c55;
+    font-weight:700;
+  }
+
+  .visual-hero h1{
+    margin:0;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:52px;
+    line-height:.88;
+    letter-spacing:2px;
+    color:#073f2d;
+  }
+
+  .visual-hero h1 span{
+    font-size:30px;
+    letter-spacing:1px;
+  }
+
+  .hero-text{
+    margin:18px 0 0;
+    font-size:18px;
+    line-height:1.45;
+    color:#073f2d;
+  }
+
+  .visual-nav{
+    position:sticky;
+    top:0;
+    z-index:30;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:12px 14px;
+    background:rgba(247,239,229,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(216,199,180,.6);
+  }
+
+  .visual-nav a{
+    flex:0 0 auto;
+    text-decoration:none;
+    color:#073f2d;
+    background:#fffaf3;
+    border:1px solid #d8c7b4;
+    border-radius:999px;
+    padding:10px 14px;
+    font-size:14px;
+    box-shadow:0 3px 10px rgba(0,0,0,.04);
+  }
+
+  .visual-card{
+    margin:16px 14px;
+    background:#fffaf3;
+    border:1px solid #d8c7b4;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 10px 26px rgba(0,0,0,.07);
+  }
+
+  .visual-card:not(.image-card){
+    padding:22px 20px;
+  }
+
+  .card-body{
+    padding:22px 20px;
+  }
+
+  .visual-card h2{
+    margin:0 0 12px;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:31px;
+    line-height:1.05;
+    color:#073f2d;
+    letter-spacing:.2px;
+  }
+
+  .visual-card p,
+  .visual-card li{
+    font-size:17px;
+    line-height:1.55;
+    color:#143d31;
+  }
+
+  .visual-card p{
+    margin:0 0 14px;
+  }
+
+  .image-band{
+    height:170px;
+    background-size:cover;
+    background-position:center;
+    border-bottom:1px solid #d8c7b4;
+  }
+
+  .location-band{
+    background-image:
+      linear-gradient(rgba(7,63,45,.05), rgba(7,63,45,.12)),
+      url("assets/page-01.png");
+    background-position:center 52%;
+  }
+
+  .events-band{
+    background-image:
+      linear-gradient(rgba(7,63,45,.04), rgba(7,63,45,.18)),
+      url("assets/page-02.png");
+    background-position:center 30%;
+  }
+
+  .beach-band{
+    background-image:
+      linear-gradient(rgba(7,63,45,.02), rgba(7,63,45,.12)),
+      url("assets/page-05.png");
+    background-position:center 24%;
+  }
+
+  .address{
+    font-size:22px!important;
+    font-weight:800;
+    color:#073f2d!important;
+  }
+
+  .visual-chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+  }
+
+  .visual-chips span{
+    background:#f0e8dc;
+    border:1px solid rgba(216,199,180,.9);
+    color:#073f2d;
+    border-radius:999px;
+    padding:8px 12px;
+    font-size:14px;
+  }
+
+  .pretty-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 16px;
+    display:grid;
+    gap:10px;
+  }
+
+  .pretty-list li{
+    background:#f7efe5;
+    border:1px solid rgba(216,199,180,.8);
+    border-radius:16px;
+    padding:12px 14px;
+  }
+
+  .pretty-list.compact li{
+    padding:10px 12px;
+  }
+
+  .tip-box{
+    background:#f1e2d2;
+    border-left:4px solid #9f6c55;
+    border-radius:16px;
+    padding:14px 14px;
+    font-size:16px;
+    line-height:1.45;
+    color:#073f2d;
+  }
+
+  .visual-button{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    background:#073f2d;
+    border-radius:16px;
+    padding:15px 16px;
+    font-weight:800;
+    font-size:16px;
+    margin-top:12px;
+    box-shadow:0 8px 18px rgba(7,63,45,.14);
+  }
+
+  .visual-button.secondary{
+    background:#315f50;
+  }
+
+  .button-grid{
+    display:grid;
+    gap:10px;
+    margin-top:8px;
+  }
+
+  .closing-card{
+    margin-bottom:22px;
+    background:#f4eadc;
+  }
+
+  .back-home{
+    display:none;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -371,86 +608,90 @@ outline:none;
 
 </main>
 
-<main class="mobile-guide" aria-label="Mobile-friendly Sitges guide">
-  <section class="mobile-hero">
-    <div class="brand">TERRACE RETREAT</div>
-    <div class="tagline">Feel at home, away from home</div>
-    <h1>Sitges<br><span>& Surroundings</span></h1>
-    <p>Discover the charm of the Mediterranean from your accommodation.</p>
+
+<main class="mobile-guide visual-mobile" aria-label="Mobile-friendly Sitges guide">
+  <section class="visual-hero">
+    <div class="hero-overlay">
+      <p class="eyebrow">Terrace Retreat</p>
+      <h1>Sitges<br><span>& Surroundings</span></h1>
+      <p class="hero-text">A Mediterranean guide designed for your stay.</p>
+    </div>
   </section>
 
-  <section class="quick-nav">
+  <nav class="visual-nav" aria-label="Mobile guide menu">
     <a href="#mobile-location">Location</a>
-    <a href="#mobile-transport">Transport</a>
-    <a href="#mobile-info">Info</a>
+    <a href="#mobile-events">Events</a>
+    <a href="#mobile-beaches">Beaches</a>
     <a href="../index.html">Languages</a>
-  </section>
+  </nav>
 
-  <section class="mobile-card intro-card">
-    <h2>Welcome to Sitges</h2>
-    <p>One of the most enchanting destinations on the Mediterranean.</p>
-    <div class="chips">
-      <span>Beaches</span><span>Culture</span><span>Gastronomy</span><span>Nature</span>
+  <section class="visual-card intro-visual">
+    <p class="section-kicker">Welcome</p>
+    <h2>Sitges at your fingertips</h2>
+    <p>Explore beaches, culture, food, nature and local life from a practical mobile guide made for easy use during your stay.</p>
+    <div class="visual-chips">
+      <span>Beaches</span><span>Culture</span><span>Food</span><span>Nature</span>
     </div>
   </section>
 
-  <section class="mobile-card" id="mobile-location">
-    <h2>Accommodation location</h2>
-    <p class="big">Illa de Cuba, 11</p>
-    <p>City center · 5 min walk from the train station · Close to restaurants, shops and beaches.</p>
-    <a class="mobile-button" href="https://www.google.com/maps/search/?api=1&query=Illa%20de%20Cuba%2011%2C%20Sitges%2C%20Spain" target="_blank" rel="noopener">Open in Google Maps</a>
+  <section class="visual-card image-card" id="mobile-location">
+    <div class="image-band location-band"></div>
+    <div class="card-body">
+      <p class="section-kicker">Your stay</p>
+      <h2>Accommodation location</h2>
+      <p class="address">Illa de Cuba, 11</p>
+      <p>In the city center, around 5 minutes from the train station and close to shops, restaurants and the beach.</p>
+      <a class="visual-button" href="https://www.google.com/maps/search/?api=1&query=Illa%20de%20Cuba%2011%2C%20Sitges%2C%20Spain" target="_blank" rel="noopener">Open in Google Maps</a>
+    </div>
   </section>
 
-  <section class="mobile-card" id="mobile-transport">
-    <h2>Transportation & access</h2>
-    <ul>
-      <li>Train station (Renfe): 5 min walk</li>
-      <li>Direct connection with Barcelona: 30–40 min</li>
-      <li>Local buses available</li>
-      <li>Sitges can be easily explored on foot</li>
+  <section class="visual-card">
+    <p class="section-kicker">Getting around</p>
+    <h2>Transport & access</h2>
+    <ul class="pretty-list">
+      <li><strong>Train station:</strong> 5 min walk</li>
+      <li><strong>Barcelona:</strong> 30–40 min by train</li>
+      <li><strong>Local buses:</strong> available nearby</li>
+      <li><strong>Walking:</strong> the easiest way to explore Sitges</li>
     </ul>
-    <a class="mobile-button secondary" href="https://www.google.com/maps/search/?api=1&query=Barcelona%2C%20Spain" target="_blank" rel="noopener">Open Barcelona in Maps</a>
+    <div class="tip-box">Local tip: the train is the easiest way to visit Barcelona without traffic.</div>
   </section>
 
-  <section class="mobile-card tip-card">
-    <h2>Local tip</h2>
-    <p>The train is the best way to visit Barcelona: fast, comfortable and traffic-free.</p>
-  </section>
-
-  <section class="mobile-card" id="mobile-info">
-    <h2>Useful information</h2>
-    <div class="button-grid">
-      <a class="mobile-button" href="https://www.visitsitges.com" target="_blank" rel="noopener">Official tourism website</a>
-      <a class="mobile-button" href="https://www.meetup.com/es-ES/" target="_blank" rel="noopener">Events in Sitges</a>
+  <section class="visual-card image-card" id="mobile-events">
+    <div class="image-band events-band"></div>
+    <div class="card-body">
+      <p class="section-kicker">Local life</p>
+      <h2>Events & Culture</h2>
+      <p>Sitges is active all year round with festivals, traditions, cinema, culture, nightlife and international events.</p>
+      <div class="button-grid">
+        <a class="visual-button" href="https://www.visitsitges.com/agenda-de-eventos-en-sitges/" target="_blank" rel="noopener">Event calendar</a>
+        <a class="visual-button secondary" href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener">What’s on now</a>
+      </div>
     </div>
   </section>
 
-  <section class="mobile-card next-card">
-    <h2>Next sections</h2>
-    <p>This is a test of Page 1 in a mobile-readable format. If you like this style, we can convert the rest page by page.</p>
+  <section class="visual-card image-card" id="mobile-beaches">
+    <div class="image-band beach-band"></div>
+    <div class="card-body">
+      <p class="section-kicker">Mediterranean</p>
+      <h2>Beaches</h2>
+      <p>Enjoy central lively beaches, calmer family spots and small coves along the coast.</p>
+      <ul class="pretty-list compact">
+        <li>Ribera — central and lively</li>
+        <li>San Sebastián — calm and charming</li>
+        <li>Fragata — iconic views</li>
+      </ul>
+      <a class="visual-button" href="https://www.google.com/maps/search/?api=1&query=Sitges+beaches" target="_blank" rel="noopener">Open beaches in Google Maps</a>
+    </div>
   </section>
 
-<section class="mobile-card">
-  <h2>Events & Culture</h2>
-  <p>Discover festivals, traditions and local culture all year round.</p>
-  <div class="button-grid">
-    <a class="mobile-button" href="https://www.visitsitges.com/agenda-de-eventos-en-sitges/" target="_blank">Event calendar</a>
-    <a class="mobile-button secondary" href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank">What’s on now</a>
-  </div>
-</section>
-
-<section class="mobile-card">
-  <h2>Beaches</h2>
-  <p>Enjoy some of the best beaches on the Mediterranean coast.</p>
-  <ul>
-    <li>Ribera – central and lively</li>
-    <li>San Sebastián – calm and family-friendly</li>
-    <li>Fragata – great views</li>
-  </ul>
-  <a class="mobile-button" href="https://www.google.com/maps/search/?api=1&query=Sitges+beaches" target="_blank">Open beaches in Google Maps</a>
-</section>
-
+  <section class="visual-card closing-card">
+    <p class="section-kicker">Test version</p>
+    <h2>Visual mobile style</h2>
+    <p>This version keeps the readability of the card layout, but adds the branded visual feel of your desktop guide.</p>
+  </section>
 </main>
+
 
 <a class="back-home" href="../index.html" aria-label="Back to language selection">Languages</a>
 </body>
