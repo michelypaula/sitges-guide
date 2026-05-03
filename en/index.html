@@ -24,13 +24,13 @@ outline:none;
 .hotspot:focus{outline:none}
 .hotspot:focus-visible{outline:none}
 .hotspot:active{background:rgba(7,63,45,.08)}
-.back-home{position:fixed;right:14px;bottom:14px;z-index:10;background:rgba(255,250,243,.92);color:#0b3b2b;text-decoration:none;border:1px solid #d8c7b4;border-radius:999px;padding:10px 14px;font-size:14px;box-shadow:0 8px 24px rgba(0,0,0,.10);line-height:1}
+.back-home{position:fixed;right:12px;bottom:12px;z-index:10;background:rgba(255,250,243,.78);color:#0b3b2b;text-decoration:none;border:1px solid #d8c7b4;border-radius:999px;padding:7px 11px;font-size:12px;box-shadow:0 4px 12px rgba(0,0,0,.08);line-height:1;backdrop-filter:blur(6px)}
 
 /* Auto layout:
    Desktop/tablet landscape = vertical scroll
    Mobile/tablet portrait = horizontal swipe with each page vertically scrollable
 */
-.swipe-hint{display:none}
+
 
 @media (max-width: 768px) and (orientation: portrait) {
   body{
@@ -69,33 +69,162 @@ outline:none;
     max-width:none;
     align-self:flex-start;
   }
-
   .back-home{
-    bottom:54px;
-  }
-
-  .swipe-hint{
-    display:block;
-    position:fixed;
-    left:50%;
-    transform:translateX(-50%);
-    bottom:14px;
-    z-index:12;
-    background:rgba(255,250,243,.92);
-    border:1px solid #d8c7b4;
-    color:#0b3b2b;
-    border-radius:999px;
-    padding:9px 14px;
-    font-size:13px;
-    line-height:1;
-    box-shadow:0 8px 24px rgba(0,0,0,.10);
-    pointer-events:none;
+    right:10px;
+    bottom:10px;
+    padding:6px 10px;
+    font-size:12px;
+    background:rgba(255,250,243,.72);
+    backdrop-filter:blur(6px);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
   }
 }
+
+/* Mobile-readable card test */
+.mobile-guide{display:none}
+
+@media (max-width: 768px) and (orientation: portrait){
+  body{overflow:auto;background:#f7efe5}
+  .desktop-guide{display:none}
+  .mobile-guide{
+    display:block;
+    min-height:100dvh;
+    padding:18px 16px 80px;
+    background:#f7efe5;
+    color:#0b3b2b;
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  .mobile-hero{
+    min-height:54vh;
+    border:1px solid #d8c7b4;
+    border-radius:28px;
+    padding:28px 20px;
+    background:
+      linear-gradient(rgba(247,239,229,.74), rgba(247,239,229,.88)),
+      url("assets/page-01.png");
+    background-size:cover;
+    background-position:center top;
+    box-shadow:0 10px 28px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+  }
+  .brand{
+    font-family:Georgia,"Times New Roman",serif;
+    letter-spacing:4px;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:4px;
+  }
+  .tagline{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:10px;
+    color:#9f6c55;
+    margin-bottom:34px;
+  }
+  .mobile-hero h1{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:48px;
+    line-height:.9;
+    margin:0 0 16px;
+    letter-spacing:2px;
+    color:#073f2d;
+  }
+  .mobile-hero h1 span{font-size:28px}
+  .mobile-hero p{
+    font-size:18px;
+    line-height:1.45;
+    margin:0;
+    max-width:330px;
+  }
+  .quick-nav{
+    position:sticky;
+    top:0;
+    z-index:20;
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    padding:12px 0;
+    background:linear-gradient(#f7efe5 70%, rgba(247,239,229,0));
+  }
+  .quick-nav a{
+    flex:0 0 auto;
+    text-decoration:none;
+    color:#073f2d;
+    background:#fffaf3;
+    border:1px solid #d8c7b4;
+    border-radius:999px;
+    padding:10px 14px;
+    font-size:14px;
+  }
+  .mobile-card{
+    background:#fffaf3;
+    border:1px solid #d8c7b4;
+    border-radius:24px;
+    padding:20px;
+    margin:14px 0;
+    box-shadow:0 8px 22px rgba(0,0,0,.06);
+  }
+  .mobile-card h2{
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:25px;
+    line-height:1.15;
+    margin:0 0 10px;
+    color:#073f2d;
+  }
+  .mobile-card p,
+  .mobile-card li{
+    font-size:17px;
+    line-height:1.5;
+  }
+  .mobile-card p{margin:0 0 14px}
+  .mobile-card ul{padding-left:22px;margin:0 0 16px}
+  .big{font-weight:700;font-size:21px!important}
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:12px;
+  }
+  .chips span{
+    background:#f0e8dc;
+    border-radius:999px;
+    padding:8px 11px;
+    font-size:14px;
+  }
+  .mobile-button{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:white;
+    background:#073f2d;
+    border-radius:16px;
+    padding:14px 16px;
+    font-weight:700;
+    font-size:16px;
+    margin-top:12px;
+  }
+  .mobile-button.secondary{
+    background:#315f50;
+  }
+  .button-grid{
+    display:grid;
+    gap:10px;
+  }
+  .tip-card{
+    background:#f4eadc;
+  }
+  .next-card{
+    opacity:.9;
+  }
+  .back-home{display:none}
+}
+
 </style>
 </head>
 <body>
-<main class="guide">
+<main class="guide desktop-guide">
 
 <section class="page" id="welcome" aria-label="Sitges and surroundings guide page 1">
 <img src="assets/page-01.png" alt="Sitges and surroundings guide with accommodation location, transportation, local tip and useful information.">
@@ -220,7 +349,67 @@ outline:none;
 </section>
 
 </main>
+
+<main class="mobile-guide" aria-label="Mobile-friendly Sitges guide">
+  <section class="mobile-hero">
+    <div class="brand">TERRACE RETREAT</div>
+    <div class="tagline">Feel at home, away from home</div>
+    <h1>Sitges<br><span>& Surroundings</span></h1>
+    <p>Discover the charm of the Mediterranean from your accommodation.</p>
+  </section>
+
+  <section class="quick-nav">
+    <a href="#mobile-location">Location</a>
+    <a href="#mobile-transport">Transport</a>
+    <a href="#mobile-info">Info</a>
+    <a href="../index.html">Languages</a>
+  </section>
+
+  <section class="mobile-card intro-card">
+    <h2>Welcome to Sitges</h2>
+    <p>One of the most enchanting destinations on the Mediterranean.</p>
+    <div class="chips">
+      <span>Beaches</span><span>Culture</span><span>Gastronomy</span><span>Nature</span>
+    </div>
+  </section>
+
+  <section class="mobile-card" id="mobile-location">
+    <h2>Accommodation location</h2>
+    <p class="big">Illa de Cuba, 11</p>
+    <p>City center · 5 min walk from the train station · Close to restaurants, shops and beaches.</p>
+    <a class="mobile-button" href="https://www.google.com/maps/search/?api=1&query=Illa%20de%20Cuba%2011%2C%20Sitges%2C%20Spain" target="_blank" rel="noopener">Open in Google Maps</a>
+  </section>
+
+  <section class="mobile-card" id="mobile-transport">
+    <h2>Transportation & access</h2>
+    <ul>
+      <li>Train station (Renfe): 5 min walk</li>
+      <li>Direct connection with Barcelona: 30–40 min</li>
+      <li>Local buses available</li>
+      <li>Sitges can be easily explored on foot</li>
+    </ul>
+    <a class="mobile-button secondary" href="https://www.google.com/maps/search/?api=1&query=Barcelona%2C%20Spain" target="_blank" rel="noopener">Open Barcelona in Maps</a>
+  </section>
+
+  <section class="mobile-card tip-card">
+    <h2>Local tip</h2>
+    <p>The train is the best way to visit Barcelona: fast, comfortable and traffic-free.</p>
+  </section>
+
+  <section class="mobile-card" id="mobile-info">
+    <h2>Useful information</h2>
+    <div class="button-grid">
+      <a class="mobile-button" href="https://www.visitsitges.com" target="_blank" rel="noopener">Official tourism website</a>
+      <a class="mobile-button" href="https://www.meetup.com/es-ES/" target="_blank" rel="noopener">Events in Sitges</a>
+    </div>
+  </section>
+
+  <section class="mobile-card next-card">
+    <h2>Next sections</h2>
+    <p>This is a test of Page 1 in a mobile-readable format. If you like this style, we can convert the rest page by page.</p>
+  </section>
+</main>
+
 <a class="back-home" href="../index.html" aria-label="Back to language selection">Languages</a>
-<div class="swipe-hint">Swipe ← → between pages</div>
 </body>
 </html>
