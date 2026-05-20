@@ -589,6 +589,56 @@ outline:none;
 }
 
 
+
+.p3-timeline-title{
+  margin:8px 14px 8px;
+}
+.p3-timeline-title img{
+  width:100%;
+  display:block;
+}
+
+.p3-timeline-row{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  padding:4px 14px 18px;
+}
+
+.p3-timeline-card{
+  flex:0 0 78%;
+  scroll-snap-align:center;
+  background:#fffaf3;
+  border:1px solid #d8c7b4;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,.07);
+}
+
+.p3-timeline-card img{
+  width:100%;
+  display:block;
+}
+
+
+.p3-card,
+.p3-link-row a,
+.p3-timeline-card,
+.p3-hero-card a,
+.p3-section-title a,
+.p3-footer-block a{
+  cursor:pointer;
+}
+
+.p3-card:hover,
+.p3-link-row a:hover,
+.p3-timeline-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(0,0,0,.12);
+}
+
 /* v35 Page 3 Netflix-style mobile layout */
 .mobile-page3-netflix{display:none}
 
@@ -902,11 +952,10 @@ outline:none;
 
 <section class="mobile-page3-netflix" id="mobile-events">
   <div class="p3-hero-card">
-    <img src="assets/p3-hero.jpg" alt="Sitges Events and Culture">
+    <a href="https://www.visitsitges.com/en/" target="_blank" rel="noopener"><img src="assets/p3-hero.jpg" alt="Sitges Events and Culture"></a>
   </div>
 
-  <div class="p3-section-title">
-    <img src="assets/p3-title-featured.jpg" alt="Cultural and Highlight Events">
+  <div class="p3-section-title"><a href="https://www.visitsitges.com/en/events/" target="_blank" rel="noopener"><img src="assets/p3-title-featured.jpg" alt="Cultural and Highlight Events"></a>
   </div>
 
   <div class="p3-row" aria-label="Cultural and highlight events">
@@ -924,8 +973,7 @@ outline:none;
     </a>
   </div>
 
-  <div class="p3-section-title other-title">
-    <img src="assets/p3-title-other.jpg" alt="Other Events of Interest">
+  <div class="p3-section-title other-title"><a href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener"><img src="assets/p3-title-other.jpg" alt="Other Events of Interest"></a>
   </div>
 
   <div class="p3-row" aria-label="Other events of interest">
@@ -943,9 +991,18 @@ outline:none;
     </a>
   </div>
 
-  <div class="p3-full-block">
-    <img src="assets/p3-timeline.jpg" alt="When to go to Sitges">
-  </div>
+  
+<div class="p3-timeline-title">
+  <img src="assets/timeline-title.jpg" alt="When to go">
+</div>
+
+<div class="p3-timeline-row">
+  <a class="p3-timeline-card" href="https://www.google.com/search?q=Sitges+Carnival+Patchwork+Festival" target="_blank" rel="noopener"><img src="assets/timeline-1.jpg" alt="February to April events"></a>
+  <a class="p3-timeline-card" href="https://www.google.com/search?q=Corpus+Christi+Sitges+Sitges+Pride" target="_blank" rel="noopener"><img src="assets/timeline-2.jpg" alt="May to June events"></a>
+  <a class="p3-timeline-card" href="https://www.google.com/search?q=Festival+Jardins+Terramar+Sitges+Fiesta+Mayor" target="_blank" rel="noopener"><img src="assets/timeline-3.jpg" alt="July to August events"></a>
+  <a class="p3-timeline-card" href="https://www.google.com/search?q=Santa+Tecla+Sitges+Film+Festival" target="_blank" rel="noopener"><img src="assets/timeline-4.jpg" alt="September to October events"></a>
+</div>
+
 
   <div class="p3-link-row" aria-label="Event links">
     <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">
@@ -959,8 +1016,7 @@ outline:none;
     </a>
   </div>
 
-  <div class="p3-footer-block">
-    <img src="assets/p3-footer.jpg" alt="Sitges is not just a place to visit, it's an experience">
+  <div class="p3-footer-block"><a href="https://www.visitsitges.com/en/" target="_blank" rel="noopener"><img src="assets/p3-footer.jpg" alt="Sitges is not just a place to visit, it's an experience"></a>
   </div>
 </section>
 <section class="visual-card image-card" id="mobile-beaches">
