@@ -589,130 +589,113 @@ outline:none;
 }
 
 
-/* v34 Netflix-style mobile Events page */
+/* v35 Page 3 Netflix-style mobile layout */
+.mobile-page3-netflix{display:none}
+
 @media (max-width:768px) and (orientation:portrait){
-  .mobile-netflix-section{
+  .mobile-page3-netflix{
     display:block;
-    padding:0 0 24px;
-    margin:0;
+    padding:4px 0 22px;
     background:#f7efe5;
   }
 
-  .netflix-hero{
-    margin:16px 14px 18px;
-    border-radius:30px;
+  .p3-hero-card,
+  .p3-full-block,
+  .p3-footer-block{
+    margin:16px 14px;
+    border-radius:24px;
     overflow:hidden;
-    border:1px solid #d8c7b4;
-    box-shadow:0 14px 34px rgba(0,0,0,.10);
     background:#fffaf3;
+    border:1px solid #d8c7b4;
+    box-shadow:0 10px 24px rgba(0,0,0,.07);
   }
 
-  .netflix-hero img,
-  .netflix-card img,
-  .netflix-full-card img,
-  .netflix-footer-image img{
+  .p3-hero-card{
+    border-radius:30px;
+    box-shadow:0 14px 34px rgba(0,0,0,.10);
+  }
+
+  .p3-hero-card img,
+  .p3-section-title img,
+  .p3-card img,
+  .p3-full-block img,
+  .p3-link-row img,
+  .p3-footer-block img{
     width:100%;
     display:block;
   }
 
-  .netflix-row-title{
+  .p3-section-title{
+    margin:22px 14px 10px;
     display:flex;
-    align-items:center;
-    gap:12px;
-    margin:22px 14px 12px;
-    color:#073f2d;
-    font-family:Georgia,"Times New Roman",serif;
-    text-transform:uppercase;
-    letter-spacing:1.2px;
-    font-weight:800;
-    font-size:17px;
+    justify-content:center;
+    opacity:.98;
   }
 
-  .netflix-row-title.small{
-    margin-top:18px;
+  .p3-section-title img{
+    max-width:92%;
+    object-fit:contain;
   }
 
-  .netflix-row-title:before,
-  .netflix-row-title:after{
-    content:"";
-    height:1px;
-    background:#315f50;
-    opacity:.45;
-    flex:1;
+  .p3-section-title.other-title{
+    margin-top:26px;
   }
 
-  .netflix-row{
+  .p3-row{
     display:flex;
     gap:14px;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
-    padding:2px 14px 14px;
+    padding:4px 14px 16px;
   }
 
-  .netflix-card{
+  .p3-card{
     flex:0 0 78%;
     scroll-snap-align:center;
-    border-radius:26px;
-    overflow:hidden;
-    border:1px solid #d8c7b4;
-    background:#fffaf3;
-    box-shadow:0 10px 24px rgba(0,0,0,.08);
+    display:block;
     text-decoration:none;
+    background:#fffaf3;
+    border:1px solid #d8c7b4;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
     transition:transform .18s ease, box-shadow .18s ease;
   }
 
-  .netflix-card.wide{
-    flex-basis:83%;
+  .p3-card.p3-medium{
+    flex-basis:82%;
   }
 
-  .netflix-card:active{
+  .p3-card:active,
+  .p3-link-row a:active{
     transform:scale(.985);
   }
 
-  .netflix-full-card,
-  .netflix-footer-image{
-    margin:16px 14px;
-    border-radius:24px;
-    overflow:hidden;
-    border:1px solid #d8c7b4;
-    background:#fffaf3;
-    box-shadow:0 10px 24px rgba(0,0,0,.07);
-  }
-
-  .netflix-link-row{
+  .p3-link-row{
     display:flex;
     gap:12px;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
     -webkit-overflow-scrolling:touch;
-    padding:0 14px 16px;
+    padding:4px 14px 14px;
   }
 
-  .netflix-link-row a{
-    flex:0 0 72%;
+  .p3-link-row a{
+    flex:0 0 74%;
     scroll-snap-align:center;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:74px;
-    padding:16px;
-    text-align:center;
-    text-decoration:none;
-    color:#073f2d;
-    background:#fffaf3;
+    display:block;
     border:1px solid #d8c7b4;
     border-radius:22px;
+    background:#fffaf3;
+    overflow:hidden;
     box-shadow:0 8px 20px rgba(0,0,0,.07);
-    font-family:Georgia,"Times New Roman",serif;
-    text-transform:uppercase;
-    letter-spacing:.6px;
-    font-weight:800;
-    font-size:17px;
+    text-decoration:none;
   }
 
-  .netflix-link-row a:active{
-    transform:scale(.985);
+  .p3-footer-block{
+    margin-top:8px;
+    box-shadow:none;
   }
 }
 
@@ -917,71 +900,70 @@ outline:none;
 
   
 
-<section class="mobile-netflix-section" id="mobile-events">
-  <div class="netflix-hero">
-    <img src="assets/m-events-hero.jpg" alt="Sitges Events and Culture">
+<section class="mobile-page3-netflix" id="mobile-events">
+  <div class="p3-hero-card">
+    <img src="assets/p3-hero.jpg" alt="Sitges Events and Culture">
   </div>
 
-  <div class="netflix-row-title">
-    <span>Cultural & Highlight Events</span>
+  <div class="p3-section-title">
+    <img src="assets/p3-title-featured.jpg" alt="Cultural and Highlight Events">
   </div>
 
-  <div class="netflix-row" aria-label="Cultural and highlight events">
-    <a class="netflix-card tall" href="https://www.google.com/search?q=Sitges+International+Fantastic+Film+Festival" target="_blank" rel="noopener">
-      <img src="assets/m-event-film.jpg" alt="Sitges International Fantastic Film Festival">
+  <div class="p3-row" aria-label="Cultural and highlight events">
+    <a class="p3-card p3-tall" href="https://www.google.com/search?q=Sitges+International+Fantastic+Film+Festival" target="_blank" rel="noopener">
+      <img src="assets/p3-card-film.jpg" alt="Sitges International Fantastic Film Festival">
     </a>
-    <a class="netflix-card tall" href="https://www.google.com/search?q=Sitges+International+Patchwork+Festival" target="_blank" rel="noopener">
-      <img src="assets/m-event-patchwork.jpg" alt="Sitges International Patchwork Festival">
+    <a class="p3-card p3-tall" href="https://www.google.com/search?q=Sitges+International+Patchwork+Festival" target="_blank" rel="noopener">
+      <img src="assets/p3-card-patchwork.jpg" alt="Sitges International Patchwork Festival">
     </a>
-    <a class="netflix-card tall" href="https://www.google.com/search?q=Barcelona+Sitges+International+Rally" target="_blank" rel="noopener">
-      <img src="assets/m-event-rally.jpg" alt="Barcelona Sitges International Rally">
+    <a class="p3-card p3-tall" href="https://www.google.com/search?q=Barcelona+Sitges+International+Rally" target="_blank" rel="noopener">
+      <img src="assets/p3-card-rally.jpg" alt="Barcelona Sitges International Rally">
     </a>
-    <a class="netflix-card tall" href="https://www.google.com/search?q=Sitges+gastronomic+events" target="_blank" rel="noopener">
-      <img src="assets/m-event-gastronomy.jpg" alt="Sitges Gastronomic Events">
-    </a>
-  </div>
-
-  <div class="netflix-row-title">
-    <span>Other Events of Interest</span>
-  </div>
-
-  <div class="netflix-row" aria-label="Other events of interest">
-    <a class="netflix-card wide" href="https://www.google.com/search?q=Sitges+Queer+Fest" target="_blank" rel="noopener">
-      <img src="assets/m-event-queer.jpg" alt="Sitges Queer Fest">
-    </a>
-    <a class="netflix-card wide" href="https://www.google.com/search?q=Festival+Jardins+Terramar+Sitges" target="_blank" rel="noopener">
-      <img src="assets/m-event-terramar.jpg" alt="Festival Jardins Terramar">
-    </a>
-    <a class="netflix-card wide" href="https://www.google.com/search?q=live+music+Sitges" target="_blank" rel="noopener">
-      <img src="assets/m-event-live-music.jpg" alt="Live music in Sitges">
-    </a>
-    <a class="netflix-card wide" href="https://www.google.com/search?q=events+in+Sitges" target="_blank" rel="noopener">
-      <img src="assets/m-event-other.jpg" alt="Other events in Sitges">
+    <a class="p3-card p3-tall" href="https://www.google.com/search?q=Sitges+gastronomic+events" target="_blank" rel="noopener">
+      <img src="assets/p3-card-gastronomy.jpg" alt="Gastronomic events in Sitges">
     </a>
   </div>
 
-  <div class="netflix-full-card">
-    <img src="assets/m-events-timeline.jpg" alt="When to go to Sitges">
+  <div class="p3-section-title other-title">
+    <img src="assets/p3-title-other.jpg" alt="Other Events of Interest">
   </div>
 
-  <div class="netflix-row-title small">
-    <span>Plan your dates</span>
+  <div class="p3-row" aria-label="Other events of interest">
+    <a class="p3-card p3-medium" href="https://www.google.com/search?q=Sitges+Queer+Fest" target="_blank" rel="noopener">
+      <img src="assets/p3-card-queer.jpg" alt="Sitges Queer Fest">
+    </a>
+    <a class="p3-card p3-medium" href="https://www.google.com/search?q=Festival+Jardins+Terramar+Sitges" target="_blank" rel="noopener">
+      <img src="assets/p3-card-terramar.jpg" alt="Jardins Terramar Festival">
+    </a>
+    <a class="p3-card p3-medium" href="https://www.google.com/search?q=live+music+Sitges" target="_blank" rel="noopener">
+      <img src="assets/p3-card-live.jpg" alt="Live music in Sitges">
+    </a>
+    <a class="p3-card p3-medium" href="https://www.google.com/search?q=events+in+Sitges" target="_blank" rel="noopener">
+      <img src="assets/p3-card-other.jpg" alt="Other events in Sitges">
+    </a>
   </div>
 
-  <div class="netflix-link-row" aria-label="Event links">
-    <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">Event Calendar</a>
-    <a href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener">What’s On Now</a>
-    <a href="https://bearsitges.org/bears-sitges-week/" target="_blank" rel="noopener">Bear Week</a>
+  <div class="p3-full-block">
+    <img src="assets/p3-timeline.jpg" alt="When to go to Sitges">
   </div>
 
-  <div class="netflix-footer-image">
-    <img src="assets/m-events-experience-footer.jpg" alt="Sitges is not just a place to visit, it is an experience">
+  <div class="p3-link-row" aria-label="Event links">
+    <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">
+      <img src="assets/p3-link-calendar.jpg" alt="Event Calendar">
+    </a>
+    <a href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener">
+      <img src="assets/p3-link-whats.jpg" alt="What's on now">
+    </a>
+    <a href="https://bearsitges.org/bears-sitges-week/" target="_blank" rel="noopener">
+      <img src="assets/p3-link-bear.jpg" alt="Bear Week">
+    </a>
+  </div>
+
+  <div class="p3-footer-block">
+    <img src="assets/p3-footer.jpg" alt="Sitges is not just a place to visit, it's an experience">
   </div>
 </section>
-
-
-
-  <section class="visual-card image-card" id="mobile-beaches">
+<section class="visual-card image-card" id="mobile-beaches">
     <div class="image-band beach-band"></div>
     <div class="card-body">
       <p class="section-kicker">Mediterranean</p>
