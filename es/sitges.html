@@ -1,0 +1,584 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Guía de Sitges</title>
+<style>
+:root{--bg:#f7efe5;--green:#073f2d;--line:#d8c7b4;--card:#fffaf3}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--green);font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.back{position:fixed;top:14px;left:14px;z-index:50;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;background:rgba(255,250,243,.94);backdrop-filter:blur(10px);border:1px solid var(--line);color:var(--green);text-decoration:none;font-weight:900;box-shadow:0 10px 24px rgba(0,0,0,.08)}.house-shell{max-width:1050px;margin:0 auto;padding:72px 16px 50px}.house-title{text-align:center;margin:0 0 18px}.house-title h1{margin:0;font-family:Georgia,"Times New Roman",serif;text-transform:uppercase;letter-spacing:3px;font-size:clamp(34px,7vw,72px);line-height:1}.house-title p{margin:8px 0 0;color:#9a6046;font-size:18px}.house-pages{display:grid;gap:24px}.house-page{background:var(--card);border:1px solid var(--line);border-radius:28px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.08)}.house-page img{width:100%;display:block;cursor:zoom-in}.zoom-modal{position:fixed;inset:0;z-index:99999;background:rgba(7,20,16,.94);display:none;align-items:center;justify-content:center;overflow:auto;touch-action:pan-x pan-y pinch-zoom;padding:48px 12px 20px}.zoom-modal.open{display:flex}.zoom-modal img{max-width:none;width:145%;height:auto;cursor:zoom-out;border-radius:12px}.zoom-close{position:fixed;top:12px;right:12px;z-index:100000;width:44px;height:44px;border-radius:999px;border:1px solid rgba(255,255,255,.35);background:rgba(255,250,243,.92);color:#073f2d;font-size:28px;line-height:1;font-weight:800}@media(max-width:760px){.house-shell{padding:64px 0 76px}.house-title{padding:0 16px}.house-pages{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:0}.house-page{flex:0 0 100%;scroll-snap-align:start;border-radius:0;border-left:0;border-right:0;box-shadow:none;background:#fff}.zoom-modal img{width:230%;max-width:none}}
+
+.language-switch-btn{position:fixed;top:14px;right:14px;z-index:50;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border-radius:999px;background:rgba(255,250,243,.94);backdrop-filter:blur(10px);border:1px solid #d8c7b4;color:#073f2d;text-decoration:none;font-weight:900;box-shadow:0 10px 24px rgba(0,0,0,.08)}
+@media(max-width:420px){.language-switch-btn{padding:10px 12px;font-size:14px}}
+
+
+.house-page{position:relative}
+.hotspot{
+  position:absolute;
+  z-index:5;
+  display:block;
+  border-radius:18px;
+  text-decoration:none;
+}
+.hotspot::after{
+  content:"↗";
+  position:absolute;
+  right:8px;
+  bottom:8px;
+  width:28px;
+  height:28px;
+  border-radius:999px;
+  background:rgba(7,63,45,.88);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  font-weight:900;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);
+}
+@media(max-width:760px){
+  .hotspot::after{width:24px;height:24px;font-size:14px;right:6px;bottom:6px}
+}
+
+
+.links-list{
+    padding:16px 20px 22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.links-list a{
+    background:#f5f1ea;
+    border:1px solid #d8c7b4;
+    color:#073f2d;
+    text-decoration:none;
+    padding:10px 14px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+}
+.links-list a:hover{
+    background:#efe5d7;
+}
+
+
+.page-caption{
+  padding:14px 18px 0;
+  font-weight:900;
+  font-size:17px;
+  color:#073f2d;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+.page-caption span{
+  color:#9a6046;
+  font-size:13px;
+  font-weight:800;
+}
+.links-panel{
+  padding:14px 18px 22px;
+}
+.links-panel details{
+  border:1px solid #d8c7b4;
+  background:#fffaf3;
+  border-radius:18px;
+  overflow:hidden;
+}
+.links-panel summary{
+  list-style:none;
+  cursor:pointer;
+  padding:14px 16px;
+  font-weight:900;
+  color:#073f2d;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.links-panel summary::-webkit-details-marker{display:none}
+.links-panel summary::after{
+  content:"⌄";
+  font-size:20px;
+  color:#9a6046;
+}
+.links-panel details[open] summary::after{
+  content:"⌃";
+}
+.links-list{
+  padding:0 14px 16px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.links-list a{
+  background:#f5f1ea;
+  border:1px solid #d8c7b4;
+  color:#073f2d;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:800;
+}
+.links-list a:hover{background:#efe5d7}
+.tip{
+  text-align:center;
+  font-size:13px;
+  color:#9a6046;
+  font-weight:800;
+  margin:8px 0 0;
+}
+.page-indicator{
+  position:fixed;
+  left:50%;
+  bottom:14px;
+  transform:translateX(-50%);
+  z-index:60;
+  background:rgba(255,250,243,.94);
+  border:1px solid #d8c7b4;
+  color:#073f2d;
+  padding:8px 14px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:14px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+}
+.quick-menu{
+  margin:0 0 20px;
+  background:#fffaf3;
+  border:1px solid #d8c7b4;
+  border-radius:24px;
+  padding:16px;
+  box-shadow:0 10px 24px rgba(0,0,0,.05);
+}
+.quick-menu h2{
+  margin:0 0 12px;
+  font-size:20px;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+.quick-menu-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.quick-menu-grid a{
+  background:#f5f1ea;
+  border:1px solid #d8c7b4;
+  color:#073f2d;
+  text-decoration:none;
+  padding:10px 13px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:900;
+}
+@media(max-width:760px){
+  .quick-menu{margin:0 16px 16px}
+  .page-caption{font-size:16px}
+}
+
+</style>
+</head><body>
+<a class="language-switch-btn" href="../index.html">🌐 Idioma</a><a class="back" href="index.html">← Página principal</a><main class="house-shell"><header class="house-title"><a href="https://maps.google.com/?q=Sitges" target="_blank" style="color:inherit;text-decoration:none;"><h1>Guía de Sitges</h1></a><p>Desplázate o desliza naturalmente la guía</p><p class="tip">Toca una página para hacer zoom · Abre “Ver enlaces útiles” para webs y mapas</p></header>
+<nav class="quick-menu" aria-label="Menu rapide du Guía de Sitges">
+  <h2>Acceso rápido</h2>
+  <div class="quick-menu-grid">
+    <a href="#page-1">📍 Transporte</a>
+    <a href="#page-2">🎉 Eventos</a>
+    <a href="#page-4">🏛 Qué ver</a>
+    <a href="#page-5">🏖 Playas</a>
+    <a href="#page-6">🥾 Naturaleza</a>
+    <a href="#page-8">🛒 Servicios</a>
+    <a href="#page-9">🍴 Restaurantes</a>
+    <a href="#page-10">🌃 Noche</a>
+  </div>
+</nav>
+<div class="house-pages"><section class="house-page" id="page-1"><img src="sitges-pages/1.jpg" alt="Contact & Aide">
+
+<div class="page-caption">📍 Transporte & emplacement<span>1 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=Illa%20de%20Cuba%2011%2C%20Sitges%2C%20Spain" target="_blank" rel="noopener">📍 Google Maps – Alojamiento</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sitges%20Train%20Station" target="_blank" rel="noopener">🚉 Google Maps – Estación de Sitges</a>
+      <a href="https://www.renfe.com/es/fr" target="_blank" rel="noopener">🚆 Horarios Renfe</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sitges%20bus%20station" target="_blank" rel="noopener">🚌 Google Maps – Autobús Sitges</a>
+      <a href="https://www.visitsitges.com/fr/" target="_blank" rel="noopener">🌐 Web oficial Visit Sitges</a>
+      <a href="https://www.sitgesanytime.com/fr/actualite/agenda" target="_blank" rel="noopener">📅 Agenda Sitges Anytime</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-2"><img src="sitges-pages/2.jpg" alt="Climatisation / Chauffage">
+
+<div class="page-caption">🎉 Fiestas y eventos LGBTQ+<span>2 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.sitgesanytime.com/en/explore/festivals-of-interest/pln355/sitges-carnival" target="_blank" rel="noopener">🎭 Web oficial – Carnaval</a>
+      <a href="https://www.sitgescorpus.cat/" target="_blank" rel="noopener">🌸 Web oficial – Corpus Christi</a>
+      <a href="https://www.sitgesfestamajor.cat/" target="_blank" rel="noopener">🎉 Web oficial – Festa Major</a>
+      <a href="https://www.sitgesanytime.com/en/calendar/pln330/festa-major-de-santa-tecla-sitges-annual-children-oriented-festival" target="_blank" rel="noopener">🎊 Info – Santa Tecla</a>
+      <a href="https://www.gaysitgespride.com/" target="_blank" rel="noopener">🏳️‍🌈 Web oficial – Sitges Pride</a>
+      <a href="https://bearsitges.org/bears-sitges-week/" target="_blank" rel="noopener">🐻 Web oficial – Bear Week</a>
+      <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">📅 Calendario Visit Sitges</a>
+      <a href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener">📅 Agenda Sitges Anytime</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-3"><img src="sitges-pages/3.jpg" alt="TV – Smart TV LG">
+
+<div class="page-caption">🎭 Cultura y festivales<span>3 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://sitgesfilmfestival.com/en" target="_blank" rel="noopener">🎬 Web oficial – Film Festival</a>
+      <a href="https://www.sitgesanytime.com/en/calendar/pln330/international-patchwork-festival-sewing-sitges" target="_blank" rel="noopener">🧵 Info – Patchwork Festival</a>
+      <a href="https://www.sitgesanytime.com/en/explore/festivals-of-interest/pln355/barcelona-sitges-international-vintage-cars-rally" target="_blank" rel="noopener">🚗 Info – Rally Barcelona–Sitges</a>
+      <a href="https://www.sitgesanytime.com/en/what-to-do/food/" target="_blank" rel="noopener">🍴 Gastronomía en Sitges</a>
+      <a href="https://sitgesqueerfest.org/" target="_blank" rel="noopener">🎭 Web oficial – Queer Fest</a>
+      <a href="https://festivalterramarcaixabank.com/en/" target="_blank" rel="noopener">🎵 Web oficial – Terramar</a>
+      <a href="https://www.sitgesanytime.com/en/whats-on/agenda" target="_blank" rel="noopener">🎤 Agenda música en directo</a>
+      <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">📅 Otros eventos</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-4"><img src="sitges-pages/4.jpg" alt="Ventilateurs de plafond">
+
+<div class="page-caption">🏛 Qué ver à Sitges<span>4 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=Church%20of%20Sant%20Bartomeu%20and%20Santa%20Tecla%2C%20Sitges" target="_blank" rel="noopener">⛪ Maps – Iglesia Sant Bartomeu</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Passeig%20Maritim%20Sitges" target="_blank" rel="noopener">🚶 Maps – Paseo marítimo</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Raco%20de%20la%20Calma%2C%20Sitges" target="_blank" rel="noopener">🌿 Maps – Racó de la Calma</a>
+      <a href="https://museusdesitges.cat/en/museum/cau-ferrat/cau-ferrat-museum" target="_blank" rel="noopener">🏛 Web oficial – Cau Ferrat</a>
+      <a href="https://museusdesitges.cat/en/museum/palau-de-maricel/palau-de-maricel" target="_blank" rel="noopener">🏛 Web oficial – Maricel</a>
+      <a href="https://www.catalunya.com/en/sitges" target="_blank" rel="noopener">🌐 Guía Catalunya</a>
+      <a href="https://lovesitges.cat/en/sitges" target="_blank" rel="noopener">🌐 Love Sitges</a>
+      <a href="https://www.sitgesanytime.com/en/plan-your-trip/sitges-in-1-day" target="_blank" rel="noopener">🌐 Sitges en 1 día</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-5"><img src="sitges-pages/5.jpg" alt="Store banne automatique">
+
+<div class="page-caption">🏖 Playas<span>5 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=Platja%20de%20la%20Ribera%2C%20Sitges" target="_blank" rel="noopener">🏖 Maps – Platja de la Ribera</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Platja%20de%20Sant%20Sebastia%2C%20Sitges" target="_blank" rel="noopener">🏖 Maps – Sant Sebastià</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Platja%20de%20la%20Fragata%2C%20Sitges" target="_blank" rel="noopener">🏖 Maps – La Fragata</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Cala%20Balmins%2C%20Sitges" target="_blank" rel="noopener">🌊 Maps – Cala Balmins</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Platja%20del%20Muerto%2C%20Sitges" target="_blank" rel="noopener">🌊 Maps – Playa del Muerto</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Platja%20del%20Garrofer%2C%20Sitges" target="_blank" rel="noopener">🌊 Maps – Garrofer</a>
+      <a href="https://www.sitgesanytime.com/en/explore/beaches-and-ports" target="_blank" rel="noopener">🌐 Sitges Anytime beaches</a>
+      <a href="https://www.visitsitges.com/en/best-beaches" target="_blank" rel="noopener">🌐 Visit Sitges playas</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-6"><img src="sitges-pages/6.jpg" alt="Cuisine / Lave-vaisselle">
+
+<div class="page-caption">🥾 Naturaleza & randonnées<span>6 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=Ermita%20de%20la%20Trinitat%2C%20Sitges%2C%20Spain&travelmode=walking" target="_blank" rel="noopener">⛪ Ruta – Ermita de la Trinitat</a>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=Sitges%2C%20Spain&destination=Vilanova%20i%20la%20Geltru%2C%20Spain&travelmode=walking" target="_blank" rel="noopener">🥾 Ruta – Camí de Ronda</a>
+      <a href="https://parcs.diba.cat/en/web/garraf" target="_blank" rel="noopener">🏞 Web oficial – Parc del Garraf</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sant%20Pere%20de%20Ribes%2C%20Spain" target="_blank" rel="noopener">🏘 Maps – Sant Pere de Ribes</a>
+      <a href="https://www.sitgesanytime.com/en/things-to-do/hiking" target="_blank" rel="noopener">🌐 Senderismo Sitges Anytime</a>
+      <a href="https://www.visitsitges.com/en/tourism-routes-and-culture" target="_blank" rel="noopener">🌐 Rutas Visit Sitges</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-7"><img src="sitges-pages/7.jpg" alt="Four">
+
+<div class="page-caption">🍷 Experiencias y excursiones<span>7 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://penedesturisme.cat/en/the-wine-route-of-penedes" target="_blank" rel="noopener">🍷 Ruta del vino del Penedès</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Penedes%20wine%20region%2C%20Spain" target="_blank" rel="noopener">🍷 Maps – Región Penedès</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Port%20d%27Aiguadolc%2C%20Sitges" target="_blank" rel="noopener">⛵ Maps – Port d’Aiguadolç</a>
+      <a href="https://sitgesrentboat.com" target="_blank" rel="noopener">🚤 Sitges Rent Boat</a>
+      <a href="https://www.waterfrontsitges.com/jet-ski" target="_blank" rel="noopener">🌊 Jet ski Waterfront</a>
+      <a href="https://bookings.portdesitges.com" target="_blank" rel="noopener">🌊 Actividades náuticas</a>
+      <a href="https://www.google.com/maps/dir/?api=1&origin=Sitges%20Train%20Station&destination=Barcelona%2C%20Spain&travelmode=transit" target="_blank" rel="noopener">🚆 Ruta – Barcelona</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Vilanova%20i%20la%20Geltru" target="_blank" rel="noopener">🏘 Maps – Vilanova</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Castelldefels%2C%20Spain" target="_blank" rel="noopener">🏖 Maps – Castelldefels</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-8"><img src="sitges-pages/8.jpg" alt="Lave-linge / Sèche-linge">
+
+<div class="page-caption">🛒 Servicios utiles<span>8 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=Mercadona%20Sitges" target="_blank" rel="noopener">🛒 Maps – Mercadona</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bonpreu%20Sitges" target="_blank" rel="noopener">🛒 Maps – Bonpreu</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Condis%20Sitges" target="_blank" rel="noopener">🛒 Maps – Condis</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Carrefour%20Express%20Sitges" target="_blank" rel="noopener">🛒 Maps – Carrefour Express</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Pharmacy%20Sitges" target="_blank" rel="noopener">💊 Maps – Pharmacies</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Hospital%20near%20Sitges" target="_blank" rel="noopener">🚑 Maps – Hospital / urgencias</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+<section class="house-page" id="page-9"><img src="sitges-pages/9.jpg" alt="Stores, plantes, déchets et règles">
+
+<div class="page-caption">🍴 Restaurantes recommandés<span>9 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=La%20Oca%20Sitges" target="_blank" rel="noopener">🍴 Maps – La Oca</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Merci%20Sitges" target="_blank" rel="noopener">🍴 Maps – Merci</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=El%20Noi%20de%20Sitges" target="_blank" rel="noopener">🍴 Maps – El Noi de Sitges</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Restaurant%20Galicia%20Sitges" target="_blank" rel="noopener">🍴 Maps – Galicia</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=La%20Zorra%20Sitges" target="_blank" rel="noopener">🍕 Maps – La Zorra</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=La%20Salseta%20Sitges" target="_blank" rel="noopener">🍴 Maps – La Salseta</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Pinchos%20Kan%20Torrat%20Sitges" target="_blank" rel="noopener">🍢 Maps – Pinchos Kan Torrat</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Izakaya%20Estrella%20Sitges" target="_blank" rel="noopener">🍣 Maps – Izakaya Estrella</a>
+      <a href="https://www.sitgesanytime.com/en/what-to-do/food/" target="_blank" rel="noopener">🌐 Más restaurantes</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-10"><img src="sitges-pages/10.jpg" alt="Départ, clés et au revoir">
+
+<div class="page-caption">🌃 Vida nocturna y últimos planes<span>10 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.google.com/maps/search/?api=1&query=Calle%20del%20Pecado%2C%20Sitges" target="_blank" rel="noopener">🌃 Maps – Calle del Pecado</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sitges%20seafront%20promenade" target="_blank" rel="noopener">🚶 Maps – Paseo marítimo</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Bars%20Sitges" target="_blank" rel="noopener">🍸 Maps – Bares en Sitges</a>
+      <a href="https://museusdesitges.cat/en/museum/cau-ferrat/cau-ferrat-museum" target="_blank" rel="noopener">🏛 Web oficial – Cau Ferrat</a>
+      <a href="https://museusdesitges.cat/en/museum/palau-de-maricel/palau-de-maricel" target="_blank" rel="noopener">🏛 Web oficial – Maricel</a>
+      <a href="https://lovesitges.cat/en/sitges" target="_blank" rel="noopener">🌐 Love Sitges</a>
+      <a href="https://www.sitgesanytime.com/en/plan-your-trip/sitges-in-1-day" target="_blank" rel="noopener">🌐 Sitges Anytime – 1 día</a>
+      <a href="https://www.visitsitges.com/en/" target="_blank" rel="noopener">🌐 Visit Sitges</a>
+    </div>
+  </details>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+<section class="house-page" id="page-11"><img src="sitges-pages/11.jpg" alt="Départ et Au Revoir">
+
+<div class="page-caption">💛 Gracias por tu estancia<span>11 / 11</span></div>
+<div class="links-panel">
+  <details>
+    <summary>Ver enlaces útiles ↗</summary>
+    <div class="links-list">
+      <a href="https://www.visitsitges.com/event-calendar/" target="_blank" rel="noopener">📅 Eventos y cultura</a>
+      <a href="https://www.visitsitges.com/en/" target="_blank" rel="noopener">🌐 Visit Sitges</a>
+      <a href="https://www.sitgesanytime.com/en/" target="_blank" rel="noopener">🌐 Sitges Anytime</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Sitges%2C%20Spain" target="_blank" rel="noopener">📍 Sitges – Google Maps</a>
+    </div>
+  </details>
+</div>
+
+
+
+</section>
+
+</div>
+</main><div class="zoom-modal" id="zoomModal"><button class="zoom-close" id="zoomClose">×</button><img id="zoomImage" alt=""></div>
+<script>
+(()=>{const m=document.getElementById('zoomModal'),z=document.getElementById('zoomImage'),c=document.getElementById('zoomClose');function o(s,a){z.src=s;z.alt=a||'';m.classList.add('open');document.body.style.overflow='hidden'}function x(){m.classList.remove('open');z.src='';document.body.style.overflow=''}document.querySelectorAll('.house-page img').forEach(i=>i.addEventListener('click',()=>o(i.src,i.alt)));c.addEventListener('click',x);m.addEventListener('click',e=>{if(e.target===m||e.target===z)x()});document.addEventListener('keydown',e=>{if(e.key==='Escape')x()});
+
+})();
+</script>
+<div class="page-indicator" id="pageIndicator">1 / 11</div>
+<script>
+(()=> {
+  const pages = [...document.querySelectorAll('.house-page')];
+  const indicator = document.getElementById('pageIndicator');
+  if(!pages.length || !indicator) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if(visible){
+      const index = pages.indexOf(visible.target) + 1;
+      indicator.textContent = index + ' / ' + pages.length;
+    }
+  }, {threshold:[0.5, 0.75]});
+
+  pages.forEach(p => observer.observe(p));
+})();
+</script>
+</body></html>
