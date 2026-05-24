@@ -56,44 +56,12 @@ body{
 .house-page img{
   width:100%;
   display:block;
-  cursor:zoom-in;
+  cursor:default;
 }
-.zoom-modal{
-  position:fixed;
-  inset:0;
-  z-index:99999;
-  background:rgba(7,20,16,.94);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  overflow:auto;
-  touch-action:pan-x pan-y pinch-zoom;
-  padding:48px 12px 20px;
-}
-.zoom-modal.open{display:flex}
-.zoom-modal img{
-  max-width:none;
-  width:100%;
-  height:auto;
-  transform-origin:center center;
-  cursor:zoom-out;
-  border-radius:12px;
-}
-.zoom-close{
-  position:fixed;
-  top:12px;
-  right:12px;
-  z-index:100000;
-  width:44px;
-  height:44px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.35);
-  background:rgba(255,250,243,.92);
-  color:#073f2d;
-  font-size:28px;
-  line-height:1;
-  font-weight:800;
-}
+
+
+
+
 @media(max-width:760px){
   .house-shell{
     padding:64px 0 76px;
@@ -117,10 +85,7 @@ body{
     box-shadow:none;
     background:#fff;
   }
-  .zoom-modal img{
-    width:160%;
-    max-width:none;
-  }
+  
 }
 
 .language-switch-btn{position:fixed;top:14px;right:14px;z-index:50;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 18px;border-radius:999px;background:rgba(255,250,243,.94);backdrop-filter:blur(10px);border:1px solid #d8c7b4;color:#073f2d;text-decoration:none;font-weight:900;font-size:16px;box-shadow:0 10px 24px rgba(0,0,0,.08)}
@@ -187,45 +152,5 @@ body{
   </div>
 </main>
 
-<div class="zoom-modal" id="zoomModal" aria-hidden="true">
-  <button class="zoom-close" id="zoomClose" aria-label="Cerrar zoom">×</button>
-  <img id="zoomImage" alt="">
-</div>
-
-<script>
-(function(){
-  const modal = document.getElementById('zoomModal');
-  const zoomImg = document.getElementById('zoomImage');
-  const closeBtn = document.getElementById('zoomClose');
-
-  function openZoom(src, alt){
-    zoomImg.src = src;
-    zoomImg.alt = alt || '';
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeZoom(){
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    zoomImg.src = '';
-    document.body.style.overflow = '';
-  }
-
-  document.querySelectorAll('.house-page img').forEach(img => {
-    img.addEventListener('click', () => openZoom(img.src, img.alt));
-  });
-
-  closeBtn.addEventListener('click', closeZoom);
-  modal.addEventListener('click', (e) => {
-    if(e.target === modal || e.target === zoomImg) closeZoom();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape') closeZoom();
-  });
-})();
-</script>
 </body>
 </html>
